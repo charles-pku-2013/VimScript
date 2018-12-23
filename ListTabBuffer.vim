@@ -14,7 +14,8 @@ function! ListTabBuffer()
         endif
         let bufmsg = bufmsg . "\t". l:bufname
 
-        let l:buftype = getbufvar(bufid, '&buftype')
+        " let l:buftype = getbufvar(bufid, '&buftype')
+        let l:buftype = getbufvar(bufid, '&filetype')
         let bufmsg = bufmsg . "\t". l:buftype
 
         if (bufloaded(bufid))
